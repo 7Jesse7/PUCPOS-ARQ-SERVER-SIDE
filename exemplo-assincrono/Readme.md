@@ -1,0 +1,1 @@
+Mostra que o Node.js não espera a leitura terminar para continuar executando o restante do código
