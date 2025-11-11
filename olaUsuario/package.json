@@ -1,0 +1,14 @@
+{
+  "name": "olausuario",
+  "version": "1.0.0",
+  "description": "projeto node aula server side",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "exemplo"
+  ],
+  "author": "Jessé Menegat",
+  "license": "MIT"
+}
