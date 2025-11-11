@@ -1,0 +1,32 @@
+<!-- views/task_list.ejs -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lista de Tarefas</title>
+</head>
+<body>
+  <h1>Minha Lista de Tarefas</h1>
+  <ol>
+    <% tasks.forEach(task => { %>
+      <li class="<%= task.completed ? 'completed' : '' %>">
+        <%= task.title %> | <%= task.description %>
+        <% if (!task.completed) { %>
+          <form action="/tasks/<%= task.id %>/complete" method="POST" style="display:inline;">
+            <button type="submit">Concluir</button>
+          </form>
+        <% } else { %>
+          <span>✅ Concluída</span>
+        <% } %>
+      </li>
+    <% }); %>
+  </ol>
+
+  <form action="/tasks" method="POST">
+    <input type="text" name="title" placeholder="Título" required />
+    <input type="text" name="description" placeholder="Descrição" required />
+    <button type="submit">Adicionar Tarefa</button>
+  </form>
+
+
+</body>
+</html>
